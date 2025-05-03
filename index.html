@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agartala Airport Internship Experience - Sayan Debnath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                            url('./photo-1556388158-158ea5ccacbd.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            border-bottom: 2px solid #00b4d8;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #00b4d8;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #00b4d8;
+            margin: 25px 0;
+            font-size: 1.8em;
+        }
+
+        ul {
+            padding-left: 30px;
+            margin: 15px 0;
+        }
+
+        .contact-box {
+            background: rgba(0, 180, 216, 0.2);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #00b4d8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .icon {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✈️ My Internship at Agartala Airport</h1>
+            <p style="font-size: 1.2em; margin-top: 10px;">By Sayan Debnath</p>
+        </header>
+
+        <section class="section">
+            <h2>📍 Introduction</h2>
+            <p>Internships are the bridge between academic knowledge and real-world applications. As an Electronics and Communication Engineering (ECE) student, I had the opportunity to intern at Agartala Airport (Maharaja Bir Bikram Airport)—an experience that not only broadened my technical understanding but also taught me vital soft skills and real-life adaptability.</p>
+        </section>
+
+        <section class="section">
+            <h2>⚙️ What I Worked On</h2>
+            <p>During my internship, I got hands-on exposure to various airport systems and technologies such as:</p>
+            <ul>
+                <li>Radar and Communication Systems</li>
+                <li>Surveillance Systems (ADS–B, SSR)</li>
+                <li>Navigation Aids (ILS, DVOR, NDB)</li>
+                <li>Power & Backup Systems</li>
+                <li>CCTV and Fire Alarm Systems</li>
+            </ul>
+        </section>
+
+        <!-- Add other sections following the same pattern -->
+
+        <section class="section">
+            <h2>🧠 Technical Skills</h2>
+            <ul>
+                <li>Real-time Communication Systems</li>
+                <li>System Redundancy Design</li>
+                <li>Ground Navigation Hardware</li>
+                <li>Technical Documentation</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>🧩 Soft Skills</h2>
+            <ul>
+                <li>Teamwork & Collaboration</li>
+                <li>Punctuality & Time Management</li>
+                <li>Effective Communication</li>
+                <li>Adaptability</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>💬 Challenges Faced</h2>
+            <ul>
+                <li>Technical Jargon Overload</li>
+                <li>Restricted Access Areas</li>
+                <li>Real-World System Complexity</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>🎯 Final Thoughts</h2>
+            <p>My internship at Agartala Airport was more than just a checkbox on my résumé. It was a transformational learning experience that helped me understand the aviation industry's backbone from a tech perspective...</p>
+        </section>
+
+        <div class="contact-box section">
+            <h2>📧 Contact</h2>
+            <p style="margin: 20px 0;">
+                <span class="icon">📨</span>
+                <a href="mailto:sayandebnath0921@gmail.com">sayandebnath0921@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Scroll animation for sections
+        const sections = document.querySelectorAll('.section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
